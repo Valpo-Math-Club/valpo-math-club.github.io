@@ -1,1 +1,37 @@
 = Goldsweeper Rules
+
+In Goldsweeper, you must mine for gold! Be careful; the more gold you find, the more bombs and thieves are nearby!
+
+Make a fortune in this _Legend of Zelda_-inspired digital board game!
+
+== Objective
+
+To score as many points as you can.
+
+== Gameplay
+
+Each turn, you choose a square on an 8 by 8 grid.
+
+The square will light up. The color of the square tells you what you've found.
+Once you hit a bomb, the game ends and the entire board lights up.
+
+== The Game Board
+
+The game board has 8 rows and 8 columns.
+There are three categories of squares:
+
+* Gold -- Gives you points and tells you how many bombs and thieves are nearby.
+* Thief -- Steals 10 points from you.
+* Bomb -- Explodes and ends the game.
+
+[columns="1,1,1"]
+|===
+|Color |Point Value |# Nearby Bombs/Thieves
+
+|Green |1 |0
+|Blue |5 |1-2
+|Red |20 |3-4
+|Silver |100 |5-6
+|Gold |300 |7-8
+|Magenta |-10 |
+|===
