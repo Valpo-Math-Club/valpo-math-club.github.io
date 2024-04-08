@@ -1,1 +1,5 @@
-= the valparaiso university mathematics club
+= Valparaiso University: Math Club
+
+== Important Links
+
+* link:./goldsweeper-rules.adoc[Goldsweeper Rules]
