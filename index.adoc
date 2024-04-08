@@ -2,4 +2,4 @@
 
 == Important Links
 
-* link:./goldsweeper-rules.adoc[Goldsweeper Rules]
+* link:./goldsweeper-rules.html[Goldsweeper Rules]
