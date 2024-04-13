@@ -1,4 +1,5 @@
 :pdf-theme: ./theme.yml
+:!pagenums:
 
 = Goldsweeper Rules
 
