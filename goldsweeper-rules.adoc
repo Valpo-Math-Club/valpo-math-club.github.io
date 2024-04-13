@@ -1,3 +1,5 @@
+:pdf-theme: ./theme.yml
+
 = Goldsweeper Rules
 
 In Goldsweeper, you must mine for gold! Be careful; the more gold you find, the more bombs and thieves are nearby!
