@@ -445,9 +445,59 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p><strong>It is never optimal to pick an edge/corner space.</strong></p>
 </div>
+<div class="paragraph">
+<p>This is the main strategy for the first move, and we aim to prove it in
+this section:</p>
+</div>
+<div class="sect3">
+<h4 id="_natural_frequency_of_first_move">Natural Frequency of first move</h4>
+<div class="paragraph">
+<p>Suppose we have eight neighbors; i.e. we’re not picking an edge or
+corner space. Also assume the board is 64 squares and there are 12
+bombs/thieves. Then the probability of picking a green square is the
+same as the probability of picking a square whose neighbors are all
+good. In other words:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[
+P (\text{green}) = \dfrac{\binom{40}{8}}{\binom{64}{8}} \approx 1.74\%
+\]
+</div>
+</div>
+<div class="paragraph">
+<p>In general, suppose a square has \(n_n\) neighbors, and there
+are \(n_b\) bad squares and \(n\) squares in total.
+Then the probability that there are \(k\) bad neighbors nearby
+is:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[
+P (k\text{ bad neighbors}) = \dfrac{\binom{n-n_b}{n_n - k}\cdot \binom{n_b}{k}}{\binom{n}{n_n}}
+\]
+</div>
+</div>
+<div class="paragraph">
+<p>\(\binom{n-n_b}{n_n - k}\cdot \binom{n_b}{k}\) is the number
+of ways to select \(k\) good neighbors out of the
+\(n_n\) neighbors you have, i.e. the number of ways to select
+our good neighbors. \(\binom{n-n_b}{n_n - k}\) is the number
+of ways you can select the good squares, and
+\(\binom{n_b}{k}\) is the number of ways you can select the
+bad squares. \(\binom{n}{n_n}\) is the number of possible
+outcomes. In our case, \(n_b = 24\) and \(n = 64\),
+we see that more bad neighbors are more likely when you don’t pick an
+edge or corner square.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_second_move">Second Move</h3>
+<div class="paragraph">
+<p><strong>It is always optimal to pick next to a green square.</strong> The reason is
+obvious and is left as an exercise to the reader.</p>
+</div>
 <div class="paragraph">
 <p><strong>It is always optimal to pick next to a thief.</strong></p>
 </div>
@@ -460,8 +510,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-04-16 14:25:28 -0500
+Last updated 2024-04-22 17:53:25 -0500
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
