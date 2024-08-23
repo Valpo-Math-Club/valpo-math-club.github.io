@@ -1,10 +1,8 @@
 = Valparaiso University: Math Club
 
-link:https://docs.google.com/forms/d/e/1FAIpQLSeJ3ypSIRttrPBvJYZk2gsY9TsIjreXw9JKPIHdP2GxZdYnPA/viewform?usp=sf_link[Join the mailing list!]
-
-++++
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ3ypSIRttrPBvJYZk2gsY9TsIjreXw9JKPIHdP2GxZdYnPA/viewform?embedded=true" width="640" height="1223" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-++++
+Click this
+link:https://docs.google.com/forms/d/e/1FAIpQLSeJ3ypSIRttrPBvJYZk2gsY9TsIjreXw9JKPIHdP2GxZdYnPA/viewform?usp=sf_link[link]
+to join our mailing list!
 
 == Important Links
 
